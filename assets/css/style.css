@@ -1018,8 +1018,10 @@ button:focus-visible {
   font-size:15px;
 }
 .related {
-  border-top:1px solid var(--line);
-  padding-block:45px 65px;
+  border-left:4px solid var(--yellow);
+  background:var(--paper);
+  padding:28px 32px 32px;
+  margin-bottom:48px;
 }
 .related h2 {
   font-size:30px;
@@ -1030,6 +1032,12 @@ button:focus-visible {
   flex-wrap:wrap;
   gap:28px 60px;
   margin-top:28px;
+}
+.related-links .text-link {
+  max-width:100%;
+}
+.related-links .text-link>span {
+  flex-shrink:0;
 }
 .about-layout {
   display:grid;
@@ -1835,7 +1843,8 @@ button:focus-visible {
     gap:18px;
   }
   .related {
-    padding-block:30px 40px;
+    padding:22px 18px 24px;
+    margin-bottom:32px;
   }
   .related-links {
     flex-direction:column;
