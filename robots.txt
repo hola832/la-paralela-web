@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /tools/
+Disallow: /revision/
+Disallow: /pruebas/
+Disallow: /content.json
+Allow: /
+# Vista previa: cada HTML conserva noindex. Sitemap pendiente del dominio definitivo.
