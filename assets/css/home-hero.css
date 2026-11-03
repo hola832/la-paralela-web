@@ -1,0 +1,72 @@
+/* Jerarquía de la portada: Ofelia protagonista, apoyo en Quicksand. */
+.home-hero-primary .hero-copy {
+  min-width:0;
+  container-type:inline-size;
+}
+.hero-accent {
+  display:block;
+  width:32px;
+  height:5px;
+  margin-bottom:22px;
+  background:var(--yellow);
+}
+.home-hero-primary h1 {
+  font-size:clamp(30px,5.4vw,82px);
+  font-size:clamp(30px,11.8cqw,82px);
+  line-height:1.04;
+  letter-spacing:-.035em;
+  margin:0;
+  overflow:visible;
+}
+.hero-title-line {
+  display:block;
+  white-space:nowrap;
+}
+.home-hero-primary .hero-prelude {
+  margin:0 0 10px;
+  font-family:var(--body);
+  font-size:clamp(20px,2.1vw,30px);
+  font-size:clamp(20px,4.2cqw,30px);
+  font-weight:600;
+  line-height:1.35;
+  color:var(--black);
+}
+.home-hero-primary .hero-copy>.lead {
+  max-width:580px;
+  margin-top:18px;
+  font-size:17px;
+  line-height:1.7;
+}
+.home-hero-primary .hero-brand {
+  max-width:400px;
+  width:min(100%,38vh);
+  width:min(100%,38svh);
+  transform:translateY(var(--brand-offset-y,0px));
+}
+.home-hero-primary .hero-brand>.brand-final,
+.home-hero-primary .hero-brand>.brand-motion {
+  transform:none;
+}
+@media(min-width:641px) and (max-width:960px) {
+  .home-hero-primary .hero-brand {
+    max-width:260px;
+  }
+}
+@media(max-width:640px) {
+  .hero-accent {
+    margin-bottom:20px;
+  }
+  .home-hero-primary .hero-prelude {
+    margin-bottom:8px;
+    font-size:clamp(18px,5.4cqw,23px);
+  }
+  .home-hero-primary .hero-copy>.lead {
+    margin-top:16px;
+    font-size:16px;
+  }
+  .home-hero-primary .hero-brand {
+    max-width:260px;
+    width:min(78%,30vh);
+    width:min(78%,30svh);
+  }
+}

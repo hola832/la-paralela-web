@@ -1,0 +1,21 @@
+/* Títulos y numeración solo en Asistencia técnica. */
+.section-space + .editorial-note {
+  /* Los dos grupos de trabajos ya aportan el mismo padding de sección. */
+  padding-block:12px;
+}
+.work-section-title::after {
+  content:"";
+  display:block;
+  width:clamp(96px,12vw,144px);
+  height:4px;
+  margin-top:14px;
+  background:var(--yellow);
+}
+.work-video-number {
+  display:block;
+  margin-bottom:8px;
+  font-size:13px;
+  font-weight:700;
+  line-height:1.5;
+  color:var(--muted);
+}

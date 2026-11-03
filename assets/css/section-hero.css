@@ -1,0 +1,17 @@
+/* Misma caja de marca y separación en Asistencia, Catálogo e Iniciativas. */
+.page-hero--symbol-top {
+  grid-template-columns:minmax(0,1fr);
+}
+.section-hero-symbol {
+  display:block;
+  width:76px;
+  height:auto;
+  aspect-ratio:145.633/114.514;
+  object-fit:contain;
+  object-position:left center;
+}
+@media(max-width:640px) {
+  .section-hero-symbol {
+    width:60px;
+  }
+}

@@ -1,0 +1,106 @@
+/* Unicode real en flujo; decoración vacía. No modifica ni convierte Ofelia. */
+@font-face {
+  font-family:'Archivo Black';
+  src:url('../fonts/archivo-black-latin.woff2') format('woff2');
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+.ofelia-char {
+  position: relative;
+  display: inline;
+  --ofelia-dot-clip: .35em;
+}
+.ofelia-weight-400 {
+  --ofelia-dot-clip: .33em;
+}
+.ofelia-source {
+  position: static;
+  display: inline;
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  font-kerning: none;
+  letter-spacing: 0;
+  line-height: inherit;
+  margin-inline-end: var(--ofelia-width-adjust, 0em);
+  color: transparent !important;
+  forced-color-adjust: none;
+  user-select: text;
+  -webkit-user-select: text;
+}
+.ofelia-weight-400 > .ofelia-source { font-weight: 400; }
+.ofelia-source::selection { color: transparent; background: #f9b233; }
+.ofelia-paint {
+  position: static;
+  display: inline;
+  /* La pintura vuelve al inicio del avance semántico y comparte su línea base. */
+  margin-inline-start: calc(-1 * var(--ofelia-advance));
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.ofelia-paint::before {
+  content: attr(data-base);
+  position: static;
+  color: inherit;
+  font: inherit;
+  font-kerning: none;
+  letter-spacing: inherit;
+}
+.ofelia-paint::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.ofelia-paint::after {
+  font-family:'Archivo Black',Arial,sans-serif;
+  font-weight:400;
+  font-size:1em;
+  font-style:normal;
+  font-synthesis:none;
+  line-height:1;
+  letter-spacing:0;
+  width:1em;
+  height:1em;
+  text-align:left;
+  white-space:pre;
+}
+.ofelia-acute > .ofelia-paint::after {
+  content:'\00b4';
+  left: calc(var(--ofelia-center) - .1735em);
+  top: calc(var(--ofelia-half-box) - .479em);
+}
+.ofelia-capital.ofelia-acute > .ofelia-paint::after { top: calc(var(--ofelia-half-box) - .709em); }
+.ofelia-dotless > .ofelia-paint::before {
+  /* La caja del glifo proporciona su propia línea base y permite recortar el punto. */
+  display: inline-block;
+  clip-path: inset(calc(var(--ofelia-dot-clip) + (1lh - 1em) / 2) -.1em -.3em -.1em);
+}
+.ofelia-diaeresis > .ofelia-paint::after {
+  content:'\00a8';
+  left: calc(var(--ofelia-center) - .166em);
+  top: calc(var(--ofelia-half-box) - .399em);
+}
+.ofelia-capital.ofelia-diaeresis > .ofelia-paint::after { top: calc(var(--ofelia-half-box) - .649em); }
+.ofelia-tilde > .ofelia-paint::after {
+  content:'\02dc';
+  left: calc(var(--ofelia-center) - .166em);
+  top: calc(var(--ofelia-half-box) - .449em);
+}
+.ofelia-capital.ofelia-tilde > .ofelia-paint::after { top: calc(var(--ofelia-half-box) - .689em); }
+.ofelia-sign {
+  font-family:'Archivo Black',Arial,sans-serif;
+  font-weight: 400;
+  font-synthesis:none;
+  font-size: 1em;
+  line-height: inherit;
+}
+@media (forced-colors: active) {
+  .ofelia-paint::after { forced-color-adjust: none; color: CanvasText; }
+}
+@media print {
+  .ofelia-source { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

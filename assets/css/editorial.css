@@ -1,0 +1,65 @@
+/* Solo las dos pausas editoriales y la aclaración del Catálogo. */
+.editorial-note {
+  padding-block:12px 64px;
+}
+.editorial-note-inner {
+  max-width:920px;
+  border-left:4px solid var(--yellow);
+  padding-left:24px;
+}
+.editorial-note-inner--shaded {
+  background:var(--paper);
+  padding:24px;
+}
+.editorial-quote {
+  color:var(--black);
+  font-size:clamp(21px,2vw,28px);
+  font-weight:700;
+  line-height:1.45;
+}
+.editorial-panel-title {
+  font-family:var(--title);
+  font-size:28px;
+  font-weight:800;
+  line-height:1.2;
+  letter-spacing:-.035em;
+  color:var(--black);
+  margin:0 0 12px;
+}
+.editorial-panel-title:last-child {
+  margin-bottom:0;
+}
+.editorial-note-inner--shaded>p,
+.about-origin>p:not(.origin-note) {
+  font-size:16px;
+  line-height:1.65;
+}
+.editorial-note-inner>p+p {
+  margin-top:20px;
+}
+.editorial-note-inner>p:not(.editorial-quote) {
+  max-width:800px;
+}
+.catalog-editorial-note {
+  padding-top:32px;
+}
+.catalog-editorial-note>p {
+  max-width:780px;
+}
+@media(max-width:640px) {
+  .editorial-panel-title {
+    font-size:25px;
+  }
+  .editorial-note {
+    padding-bottom:40px;
+  }
+  .editorial-note-inner {
+    padding-left:18px;
+  }
+  .editorial-note-inner--shaded {
+    padding:20px 18px;
+  }
+  .catalog-editorial-note {
+    padding-top:24px;
+  }
+}

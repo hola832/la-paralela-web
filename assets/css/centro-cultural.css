@@ -1,0 +1,90 @@
+/* Solo se carga en La Paralela; las proporciones de las fotos son naturales. */
+.cultural-space {
+  padding-block:64px 84px;
+}
+.space-intro {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:90px;
+  align-items:center;
+  margin-bottom:42px;
+}
+.space-heading {
+  width:100%;
+  max-width:320px;
+  margin-inline:auto;
+}
+.space-intro .space-brand-heading {
+  /* Solo se oculta margen blanco inferior: centra la composición visible. */
+  position:relative;
+  width:100%;
+  aspect-ratio:315.3726/236.1007;
+  overflow:hidden;
+  margin:0;
+}
+.space-brand-heading>img {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:auto;
+}
+.space-description {
+  align-self:center;
+}
+.space-gallery-row {
+  display:flex;
+  align-items:start;
+  gap:18px;
+  margin-bottom:18px;
+}
+.space-gallery-row:last-child { margin-bottom:0; }
+.space-photo {
+  flex:var(--photo-ratio) 1 0%;
+  display:block;
+  min-width:0;
+  text-decoration:none;
+  /* Evita el tinte táctil y la selección nativa del enlace sobre el filtro. */
+  -webkit-tap-highlight-color:transparent;
+  -webkit-user-select:none;
+  user-select:none;
+  touch-action:manipulation;
+}
+.space-photo>img {
+  width:100%;
+  height:auto;
+}
+.space-photo:focus-visible {
+  outline:3px solid var(--yellow);
+  outline-offset:4px;
+}
+.space-photo .space-expand {
+  position:absolute;
+  z-index:1;
+  right:12px;
+  bottom:12px;
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  background:#000;
+  color:var(--yellow);
+  font-size:25px;
+  line-height:1;
+  border-radius:50%;
+}
+@media(max-width:960px) {
+  .space-intro { grid-template-columns:1fr; gap:24px; }
+  .space-description { padding-top:0; }
+  .space-gallery { columns:2; column-gap:18px; }
+  .space-gallery-row { display:contents; }
+  .space-photo { break-inside:avoid; margin-bottom:18px; }
+}
+@media(max-width:640px) {
+  .cultural-space { padding-block:40px 48px; }
+  .space-intro { display:block; margin-bottom:28px; }
+  .space-heading { max-width:300px; }
+  .space-description { padding-top:24px; font-size:16px; }
+  .space-gallery { columns:1; }
+  .space-photo { margin-bottom:16px; }
+}
