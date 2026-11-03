@@ -47,6 +47,13 @@
 .home-hero-primary .hero-brand>.brand-motion {
   transform:none;
 }
+/* El logotipo fijo se muestra al terminar, nunca antes del primer fotograma. */
+.home-hero-primary .hero-brand>.brand-final {
+  visibility:hidden;
+}
+.home-hero-primary .hero-brand.is-finished>.brand-final {
+  visibility:visible;
+}
 @media(min-width:641px) and (max-width:960px) {
   .home-hero-primary .hero-brand {
     max-width:260px;
