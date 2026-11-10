@@ -1,0 +1,79 @@
+.about-faq {
+  padding-bottom:clamp(40px,5vw,64px);
+}
+.about-faq h2 {
+  margin-bottom:24px;
+}
+.about-faq h2::after {
+  content:"";
+  display:block;
+  width:32px;
+  height:4px;
+  margin-top:12px;
+  background:var(--yellow);
+}
+.about-faq-list {
+  max-width:920px;
+  border-top:1px solid var(--line);
+}
+.about-faq-item {
+  border-bottom:1px solid var(--line);
+}
+.about-faq-item > summary {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:clamp(14px,2.5vw,28px);
+  min-height:56px;
+  padding-block:16px;
+  list-style:none;
+  color:var(--black);
+  font-size:clamp(16px,1.55vw,20px);
+  font-weight:700;
+  line-height:1.45;
+  cursor:pointer;
+}
+.about-faq-item > summary::-webkit-details-marker {
+  display:none;
+}
+.about-faq-item > summary::after {
+  content:"";
+  flex:none;
+  width:8px;
+  height:8px;
+  margin-inline-end:4px;
+  border:solid currentColor;
+  border-width:0 2px 2px 0;
+  transform:translateY(-2px) rotate(45deg);
+}
+.about-faq-item[open] > summary::after {
+  transform:translateY(2px) rotate(225deg);
+}
+.about-faq-answer {
+  max-width:760px;
+  font-size:16px;
+  line-height:1.65;
+}
+.about-faq-answer > p:last-child {
+  padding-bottom:20px;
+}
+@media(prefers-reduced-motion:no-preference) {
+  .about-faq-item > summary::after {
+    transition:transform .2s ease;
+  }
+  @supports selector(::details-content) {
+    .about-faq-item::details-content {
+      display:grid;
+      grid-template-rows:0fr;
+      overflow:hidden;
+      transition:grid-template-rows .2s ease,content-visibility .2s allow-discrete;
+    }
+    .about-faq-item[open]::details-content {
+      grid-template-rows:1fr;
+    }
+    .about-faq-answer {
+      min-block-size:0;
+      overflow:hidden;
+    }
+  }
+}
