@@ -1201,24 +1201,20 @@ button:focus-visible {
   display:flex;
   flex-wrap:wrap;
   align-items:start;
-  gap:4px 16px;
+  gap:4px 12px;
 }
 .social-links .text-link {
   font-size:14px;
-  gap:8px;
+  gap:6px;
+}
+.social-links .text-link>svg {
+  flex:none;
 }
 .social-links .text-link>span {
   font-size:20px;
 }
 .contact-footer {
   padding-top:30px;
-}
-.contact-footer .footer-main {
-  display:block;
-  padding-bottom:24px;
-}
-.contact-footer .footer-brand {
-  width:96px;
 }
 @media(max-width:860px) {
   .contact-grid,.contact-details {
