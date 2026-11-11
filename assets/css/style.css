@@ -126,6 +126,26 @@ button:focus-visible {
   line-height:1.65;
   max-width:640px;
 }
+.link-arrow {
+  display:inline-block;
+  inline-size:.7324em;
+  block-size:1em;
+  vertical-align:-.16em;
+  color:var(--black);
+}
+.button .link-arrow {
+  color:inherit;
+}
+.link-arrow::before {
+  --arrow-shape:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 22'%3E%3Cpath d='M2.5 16 13.5 5M6.5 5H13.5V12' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E");
+  content:"";
+  display:block;
+  inline-size:.7324em;
+  block-size:1em;
+  background-color:currentColor;
+  -webkit-mask:var(--arrow-shape) center / contain no-repeat;
+  mask:var(--arrow-shape) center / contain no-repeat;
+}
 .text-link {
   display:inline-flex;
   align-items:center;
@@ -1097,85 +1117,140 @@ button:focus-visible {
   font-size:17px;
 }
 .contact-hero {
-  padding-top:72px;
-  padding-bottom:48px;
+  padding-block:clamp(36px,5vw,70px) clamp(24px,4vw,44px);
 }
 .contact-hero h1 {
-  font-size:clamp(44px,6vw,82px);
-  margin-block:20px 28px;
+  font-size:clamp(43px,6vw,82px);
+  margin-bottom:18px;
+  text-wrap:balance;
 }
 .contact-hero .lead {
-  font-size:19px;
+  font-size:clamp(16px,1.5vw,19px);
 }
 .yellow-dot {
   color:var(--yellow);
 }
-.contact-grid {
+.contact-grid,.contact-details {
+  border-top:1px solid var(--line);
   display:grid;
-  grid-template-columns:1.5fr 1fr;
-  gap:100px;
-  padding-block:26px 84px;
+  gap:clamp(20px,3vw,48px);
 }
-.contact-primary .eyebrow {
+.contact-grid {
+  grid-template-columns:minmax(0,1fr) minmax(0,.85fr) minmax(0,1.3fr);
+  padding-block:28px 38px;
+}
+.contact-method+.contact-method,.contact-social {
+  border-inline-start:1px solid var(--line);
+  padding-inline-start:clamp(20px,3vw,48px);
+}
+.contact-method .eyebrow {
+  font-family:var(--body);
   margin-bottom:10px;
 }
-.big-contact {
+.contact-method .button {
+  max-width:100%;
+  gap:18px;
+  text-align:left;
+}
+.contact-method-links {
+  display:grid;
+  justify-items:start;
+  gap:2px;
+}
+.contact-value {
   display:block;
-  font-size:clamp(20px,2.8vw,34px);
-  line-height:1.5;
-  letter-spacing:-.04em;
-  font-family:var(--body);
-  font-weight:400;
+  max-width:100%;
+  padding-block:8px;
+  min-height:44px;
+  color:var(--black);
+  font-size:clamp(17px,1.55vw,22px);
+  font-weight:700;
+  line-height:1.4;
   text-decoration:none;
   overflow-wrap:anywhere;
-  color:#000;
-  padding-bottom:22px;
-  border-bottom:1px solid var(--line);
-  margin-bottom:26px;
 }
-.big-contact>span {
-  white-space:nowrap;
+.contact-value:hover {
+  text-decoration:underline;
 }
-.contact-primary .button {
-  margin-top:8px;
-}
-.contact-location {
-  border-left:1px solid var(--line);
-  padding-left:48px;
-}
-.contact-location>.section-symbol {
-  width:55px;
-  height:55px;
-  margin-bottom:20px;
-}
-.contact-location h2 {
-  font-size:30px;
-  margin-bottom:15px;
-}
-.contact-location>p {
-  font-size:15px;
-}
-.contact-location>.contact-address-label {
-  font-size:12px;
-}
-.contact-location>.text-link {
-  margin-top:16px;
-}
-.social-links {
-  margin-top:30px;
-  display:flex;
-  flex-direction:column;
-  align-items:start;
+.contact-grid .text-link,.contact-details .text-link {
+  min-height:44px;
   gap:12px;
 }
-.social-links .eyebrow {
-  margin-bottom:6px;
+.contact-details {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  padding-block:30px 54px;
+}
+.contact-details h2 {
+  font-size:clamp(26px,2.6vw,34px);
+  margin-bottom:10px;
+}
+.contact-location {
+  display:grid;
+  grid-template-columns:48px minmax(0,1fr);
+  align-items:start;
+  gap:16px;
+}
+.contact-location .section-symbol {
+  width:48px;
+  height:48px;
+}
+.contact-location .text-link {
+  margin-top:6px;
+}
+.social-links {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:start;
+  gap:4px 16px;
 }
 .social-links .text-link {
   font-size:14px;
+  gap:8px;
 }
 .social-links .text-link>span {
   font-size:20px;
+}
+.contact-footer {
+  padding-top:30px;
+}
+.contact-footer .footer-main {
+  display:block;
+  padding-bottom:24px;
+}
+.contact-footer .footer-brand {
+  width:96px;
+}
+@media(max-width:860px) {
+  .contact-grid,.contact-details {
+    grid-template-columns:minmax(0,1fr);
+    gap:0;
+  }
+  .contact-grid {
+    padding-block:0;
+  }
+  .contact-method {
+    padding-block:18px;
+  }
+  .contact-method+.contact-method,.contact-social {
+    border-inline-start:0;
+    border-top:1px solid var(--line);
+    padding-inline-start:0;
+  }
+  .contact-method-links {
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:0 18px;
+  }
+  .contact-details {
+    padding-block:0 36px;
+  }
+  .contact-location,.contact-social {
+    padding-block:22px;
+  }
+  .contact-social {
+    padding-bottom:0;
+  }
 }
 @media(min-width:1600px) {
   .container {
@@ -1227,7 +1302,7 @@ button:focus-visible {
   .catalog-story {
     gap:70px;
   }
-  .detail-layout,.about-layout,.contact-grid {
+  .detail-layout,.about-layout {
     gap:60px;
   }
   .detail-layout.has-video { gap:50px; }
@@ -1459,12 +1534,6 @@ button:focus-visible {
   }
   .about-copy h1 {
     font-size:58px;
-  }
-  .contact-grid {
-    gap:40px;
-  }
-  .contact-location {
-    padding-left:30px;
   }
   .about-method {
     gap:45px;
@@ -1880,43 +1949,6 @@ button:focus-visible {
   }
   .about-method>p {
     font-size:16px;
-  }
-  .contact-hero {
-    padding-block:40px 30px;
-  }
-  .contact-hero h1 {
-    font-size:43px;
-    line-height:1.1;
-    margin-block:20px 25px;
-  }
-  .contact-hero .lead {
-    font-size:17px;
-  }
-  .contact-grid {
-    display:block;
-    padding-block:15px 40px;
-  }
-  .big-contact {
-    font-size:clamp(18px,5.4vw,29px);
-    letter-spacing:-.03em;
-    padding-bottom:17px;
-    margin-bottom:22px;
-  }
-  .contact-location {
-    padding:30px 0 0;
-    margin-top:35px;
-    border-left:0;
-    border-top:1px solid var(--line);
-  }
-  .contact-location>.section-symbol {
-    width:45px;
-    height:45px;
-  }
-  .contact-location h2 {
-    font-size:31px;
-  }
-  .social-links {
-    margin-top:26px;
   }
   .play-icon {
     width:58px;
