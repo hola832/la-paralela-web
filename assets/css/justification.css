@@ -1,0 +1,44 @@
+.about-justification {
+  margin-bottom: clamp(40px, 5vw, 64px);
+  padding-block: clamp(36px, 5vw, 68px);
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.about-justification h2 {
+  text-wrap: balance;
+}
+
+.about-justification-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 60px);
+  margin-top: clamp(22px, 3vw, 36px);
+}
+
+.about-justification h3 {
+  font-size: clamp(22px, 2vw, 28px);
+  white-space: normal;
+}
+
+.about-justification p,
+.activity-justification {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about-justification p {
+  max-width: 40ch;
+  margin-top: 8px;
+}
+
+.activity-justification {
+  max-width: 58ch;
+  margin-top: 12px;
+}
+
+@media (max-width: 800px) {
+  .about-justification-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
