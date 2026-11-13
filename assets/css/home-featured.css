@@ -166,11 +166,15 @@
     flex-direction:column;
   }
   .feature-copy>.feature-summary {
+    margin-bottom:auto;
     font-size:16px;
     line-height:1.6;
   }
+  .feature-copy>.price {
+    font-size:clamp(20px,2.1vw,22px)!important;
+  }
   .feature-actions {
-    margin-top:auto;
+    margin-top:0;
     padding-top:20px;
   }
   .feature-actions .button {
