@@ -19,3 +19,22 @@
   line-height:1.5;
   color:var(--muted);
 }
+
+/* Reparte el espacio entre el último trabajo y la franja amarilla. */
+.more-works {
+  padding-block-end:16px;
+}
+.more-works + .brand-divider {
+  margin-block-end:48px;
+}
+@media (max-width:640px) {
+  .more-works {
+    padding-block-end:21px;
+  }
+  .more-works .photo-work:last-child {
+    margin-block-end:0;
+  }
+  .more-works + .brand-divider {
+    margin-block-end:43px;
+  }
+}
