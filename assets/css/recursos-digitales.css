@@ -14,8 +14,7 @@
   margin-bottom:22px;
   background:var(--yellow);
 }
-.digital-hero h2,
-.digital-copy-layout h2 {
+.digital-hero h2 {
   font-size:clamp(28px,3vw,40px);
   text-wrap:balance;
 }
@@ -95,23 +94,10 @@
   margin:clamp(26px,4vw,48px) auto 0;
   border:1px solid var(--line);
 }
-.digital-copy-layout {
-  display:grid;
-  grid-template-columns:minmax(0,.8fr) minmax(0,1fr);
-  align-items:start;
-  gap:clamp(18px,5vw,64px);
-}
-.digital-closing {
-  align-items:center;
-}
-.digital-closing .button {
-  justify-self:start;
-}
 
 @media(max-width:800px) {
   .digital-hero,
-  .digital-example,
-  .digital-copy-layout {
+  .digital-example {
     grid-template-columns:minmax(0,1fr);
   }
   .digital-hero h1 {
