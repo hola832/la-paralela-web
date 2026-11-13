@@ -96,10 +96,16 @@
 .featured-title-line:first-child {
   font-size:calc(1em - 2px);
 }
-.featured-curated .price small {
-  display:block;
+.featured-curated .price--monthly {
+  container-type:inline-size;
+}
+.price--monthly > span {
+  font-size:clamp(16px, calc(10cqi - 6px), 1em);
+}
+.price--monthly > small {
   font-size:13px;
   font-weight:600;
+  white-space:nowrap;
 }
 .feature-actions {
   display:flex;
