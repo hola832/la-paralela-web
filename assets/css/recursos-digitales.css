@@ -56,6 +56,7 @@
 
 .digital-preview {
   -webkit-touch-callout:none;
+  -webkit-tap-highlight-color:transparent;
   display:grid;
   grid-template-columns:minmax(0,1fr);
   justify-self:center;
@@ -78,16 +79,12 @@
   height:auto;
   object-fit:contain;
 }
+/* El cambio directo evita mezclar dos capturas con contornos distintos. */
 .digital-preview-color {
-  opacity:0;
+  visibility:hidden;
 }
 .digital-preview[aria-pressed="true"] .digital-preview-color {
-  opacity:1;
-}
-@media(prefers-reduced-motion:no-preference) {
-  .digital-preview-color {
-    transition:opacity .18s ease;
-  }
+  visibility:visible;
 }
 
 .digital-event {
