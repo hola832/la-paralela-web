@@ -42,11 +42,15 @@
 
 .digital-example {
   display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(0,.8fr);
-  align-items:center;
+  grid-template-columns:minmax(0,.8fr) minmax(0,1fr);
+  grid-template-areas:"preview copy";
+  align-items:start;
   gap:clamp(28px,6vw,88px);
   padding-block:clamp(30px,4vw,58px);
   border-top:1px solid var(--line);
+}
+.digital-example .digital-prose {
+  grid-area:copy;
 }
 .digital-example-heading {
   display:flex;
@@ -87,6 +91,7 @@
 }
 /* Alinea los marcos de los móviles con los de la versión corporativa. */
 .digital-example .digital-preview {
+  grid-area:preview;
   overflow:hidden;
 }
 .digital-example .digital-preview-color {
@@ -131,6 +136,7 @@
     margin-bottom:18px;
   }
   .digital-example {
+    grid-template-areas:"copy" "preview";
     gap:24px;
   }
 }
@@ -155,10 +161,8 @@
   }
   .digital-apps .digital-example {
     position:relative;
-    grid-template-columns:minmax(0,1fr);
-    grid-template-rows:1fr auto;
-    align-items:start;
-    gap:22px;
+    grid-template-columns:clamp(140px,13vw,192px) minmax(0,1fr);
+    gap:clamp(18px,2vw,28px);
     padding-block:24px 28px;
     border-top:0;
   }
@@ -184,7 +188,7 @@
     line-height:1.6;
   }
   .digital-apps .digital-preview {
-    width:min(100%,clamp(184px,16vw,224px));
+    width:100%;
   }
   .digital-examples-note {
     grid-column:1 / -1;
