@@ -101,11 +101,6 @@
   align-items:start;
   gap:clamp(18px,5vw,64px);
 }
-.digital-evaluation {
-  padding:clamp(24px,4vw,52px);
-  background:var(--yellow);
-  color:var(--black);
-}
 .digital-closing {
   align-items:center;
 }
