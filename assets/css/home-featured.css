@@ -96,6 +96,11 @@
 .featured-title-line:first-child {
   font-size:calc(1em - 2px);
 }
+.featured-curated .price small {
+  display:block;
+  font-size:13px;
+  font-weight:600;
+}
 .feature-actions {
   display:flex;
   flex-wrap:wrap;
