@@ -90,11 +90,6 @@
 .digital-event {
   background:var(--paper);
 }
-.digital-event-copy {
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:clamp(18px,4vw,56px);
-}
 .digital-preview--web {
   width:min(100%,1024px);
   margin:clamp(26px,4vw,48px) auto 0;
@@ -121,7 +116,6 @@
 @media(max-width:800px) {
   .digital-hero,
   .digital-example,
-  .digital-event-copy,
   .digital-copy-layout {
     grid-template-columns:minmax(0,1fr);
   }
