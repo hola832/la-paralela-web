@@ -14,15 +14,8 @@
   margin-bottom:22px;
   background:var(--yellow);
 }
-.digital-hero h2 {
-  font-size:clamp(28px,3vw,40px);
-  text-wrap:balance;
-}
 .digital-prose {
   max-width:64ch;
-}
-.digital-prose h2 {
-  margin-bottom:18px;
 }
 
 .digital-examples-heading {
