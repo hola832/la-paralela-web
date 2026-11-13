@@ -144,7 +144,7 @@
   .digital-apps {
     --examples-gap:clamp(24px,3vw,44px);
     display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-template-columns:repeat(2,minmax(0,1fr));
     column-gap:var(--examples-gap);
   }
   .digital-apps > .digital-category-title {
