@@ -64,6 +64,14 @@
   border:0;
   background:#fff;
 }
+/* Alinea los marcos de los móviles con los de la versión corporativa. */
+.digital-example .digital-preview {
+  overflow:hidden;
+}
+.digital-example .digital-preview-color {
+  transform:translateX(-.2%) scale(1.094,.995);
+}
+
 .digital-preview img {
   grid-area:1/1;
   width:100%;
