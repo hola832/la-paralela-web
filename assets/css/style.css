@@ -667,7 +667,7 @@ button:focus-visible {
   flex-shrink:0;
 }
 .home-about {
-  background:var(--paper);
+  background:#fff;
   padding-block:64px;
 }
 .home-about-inner {
