@@ -1,4 +1,7 @@
 /* Destacados de Inicio. */
+.justification-band--brief + .brand-divider {
+  margin-block:clamp(46px,4vw,60px) 8px;
+}
 .featured-curated .feature-intro {
   margin-bottom:clamp(18px,2vw,26px);
   padding:clamp(16px,2vw,24px) clamp(16px,2.5vw,32px);
