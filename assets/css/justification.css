@@ -1,35 +1,61 @@
-.about-justification {
+.justification-band {
   margin-bottom: clamp(40px, 5vw, 64px);
   padding-block: clamp(36px, 5vw, 68px);
   background-color: var(--yellow);
   color: var(--black);
 }
 
-.about-justification h2 {
+.justification-band h2 {
   text-wrap: balance;
 }
 
-.about-justification-grid {
+.justification-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(24px, 4vw, 60px);
   margin-top: clamp(22px, 3vw, 36px);
 }
 
-.about-justification h3 {
+.justification-band h3 {
   font-size: clamp(22px, 2vw, 28px);
   white-space: normal;
 }
 
-.about-justification p,
+.justification-band p,
 .activity-justification {
   font-size: 16px;
   line-height: 1.6;
 }
 
-.about-justification p {
+.justification-grid p {
   max-width: 40ch;
   margin-top: 8px;
+}
+
+.justification-intro {
+  margin-top: 12px;
+}
+
+.justification-band--brief {
+  margin-bottom: clamp(28px, 3.5vw, 48px);
+  padding-block: clamp(28px, 3.5vw, 48px);
+}
+
+.justification-band--brief h2 {
+  font-size: clamp(28px, 3.3vw, 40px);
+}
+
+.justification-band--brief .justification-intro {
+  max-width: 68ch;
+}
+
+.justification-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .activity-justification {
@@ -38,7 +64,7 @@
 }
 
 @media (max-width: 800px) {
-  .about-justification-grid {
+  .justification-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 }
