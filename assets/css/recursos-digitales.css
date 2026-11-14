@@ -116,12 +116,6 @@
   border-top:1px solid var(--line);
   padding-top:16px;
 }
-@media (width > 800px) {
-  .digital-justification .justification-grid > div {
-    display:grid;
-    grid-template-rows:auto 1fr auto;
-  }
-}
 .digital-justification-heading {
   display:flex;
   align-items:center;
