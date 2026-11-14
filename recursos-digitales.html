@@ -93,6 +93,27 @@
             <feComposite in2="yellow-mask" operator="in" result="brand-yellow" />
             <feComposite in="brand-yellow" in2="SourceGraphic" operator="over" />
           </filter>
+          <!-- Las regiones de las máscaras aíslan los rellenos grises en sus respectivas ilustraciones. -->
+          <filter id="gris-valoraciones-justificacion" primitiveUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+            <feColorMatrix x="14.8%" y="26.5%" width="16.7%" height="50.5%" type="matrix"
+              values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.2126 0.7152 0.0722 0 0" />
+            <feComponentTransfer result="gray-mask">
+              <feFuncA type="table" tableValues="0 0 .025 .035 .052 .073 .099 .126 .16 .218 .278 .38 .72 1 1 .5 0" />
+            </feComponentTransfer>
+            <feFlood flood-color="var(--paper)" />
+            <feComposite in2="gray-mask" operator="in" result="paper-gray" />
+            <feComposite in="paper-gray" in2="SourceGraphic" operator="over" />
+          </filter>
+          <filter id="gris-informes-justificacion" primitiveUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+            <feColorMatrix x="42.1%" y="54.4%" width="4.5%" height="17.2%" type="matrix"
+              values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.2126 0.7152 0.0722 0 0" />
+            <feComponentTransfer result="gray-mask">
+              <feFuncA type="table" tableValues="0 0 .025 .04 .06 .08 .11 .14 .18 .24 .31 .44 1 1 1 .5 0" />
+            </feComponentTransfer>
+            <feFlood flood-color="var(--paper)" />
+            <feComposite in2="gray-mask" operator="in" result="paper-gray" />
+            <feComposite in="paper-gray" in2="SourceGraphic" operator="over" />
+          </filter>
         </defs>
       </svg>
       <div class="container">
@@ -107,7 +128,7 @@
               <h4>Valoraciones</h4>
             </div>
             <p>Recogemos y organizamos las valoraciones de las personas participantes tras su participación en las actividades.</p>
-            <img class="digital-justification-illustration" src="assets/images/justificacion-valoraciones.jpg" width="1280" height="427" alt="Valoraciones de participantes: negativa, neutra y positiva" loading="lazy" decoding="async">
+            <img class="digital-justification-illustration" src="assets/images/justificacion-valoraciones.jpg" width="1280" height="427" alt="Valoraciones de participantes: negativa, neutra y positiva" loading="lazy" decoding="async" style="filter:url(#amarillo-ilustraciones-justificacion) url(#gris-valoraciones-justificacion)">
           </div>
           <div>
             <div class="digital-justification-heading">
@@ -123,7 +144,7 @@
               <h4>Informes</h4>
             </div>
             <p>Convertimos la información recogida en informes útiles para la evaluación y la memoria justificativa.</p>
-            <img class="digital-justification-illustration" src="assets/images/justificacion-informes.jpg" width="1280" height="427" alt="Informes de resultados: gráficos y documento" loading="lazy" decoding="async">
+            <img class="digital-justification-illustration" src="assets/images/justificacion-informes.jpg" width="1280" height="427" alt="Informes de resultados: gráficos y documento" loading="lazy" decoding="async" style="filter:url(#amarillo-ilustraciones-justificacion) url(#gris-informes-justificacion)">
           </div>
         </div>
       </div>
