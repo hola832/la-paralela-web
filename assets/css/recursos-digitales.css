@@ -60,7 +60,7 @@
 }
 .digital-example-heading img {
   flex:none;
-  width:clamp(56px,5vw,60px);
+  width:clamp(64px,6vw,68px);
 }
 .digital-example-heading h4 {
   margin:0;
