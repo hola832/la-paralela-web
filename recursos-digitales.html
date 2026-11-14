@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="assets/css/mobile-header.css?v=d97a32548d2b"><script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"], "name": "La Paralela \u00b7 Ocio y Escuela", "alternateName": "La Paralela", "email": "hola@laparalelaocioyescuela.com", "telephone": "+34744653513", "address": {"@type": "PostalAddress", "streetAddress": "Calle Roble, n\u00ba 15", "addressLocality": "Pozoblanco", "postalCode": "14400", "addressRegion": "C\u00f3rdoba", "addressCountry": "ES"}, "areaServed": {"@type": "AdministrativeArea", "name": "Provincia de C\u00f3rdoba"}, "sameAs": ["https://www.instagram.com/laparalelaocioyescuela/", "https://www.facebook.com/share/177DT2UPGS/?mibextid=wwXIfr", "https://youtube.com/@laparalelaocioyescuela"], "@id": "https://laparalelaocioyescuela.com/#organizacion", "url": "https://laparalelaocioyescuela.com/", "logo": "https://laparalelaocioyescuela.com/assets/images/logo.png", "image": "https://laparalelaocioyescuela.com/assets/images/social.jpg"}</script>
 <link rel="stylesheet" href="assets/css/analytics-consent.css?v=96003b86062b">
 <script src="assets/js/analytics-consent.js?v=06a2f976f9e9" defer></script>
-<link rel="stylesheet" href="assets/css/recursos-digitales.css?v=01b534be4380">
+<link rel="stylesheet" href="assets/css/recursos-digitales.css?v=4e9e42e5167d">
 <script src="assets/js/recursos-digitales.js?v=74f9baa3bb00" defer></script>
 <link rel="stylesheet" href="assets/css/justification.css?v=331275d60813">
 </head>
@@ -83,6 +83,18 @@
     </section>
 
     <section class="digital-justification section-space" id="apoyo-justificacion" aria-labelledby="herramientas-justificacion">
+      <svg class="digital-justification-color-filter" width="0" height="0" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="amarillo-ilustraciones-justificacion" color-interpolation-filters="sRGB">
+            <!-- La diferencia entre los canales rojo y azul aísla el amarillo de los tonos neutros. -->
+            <feColorMatrix in="SourceGraphic" type="matrix"
+              result="yellow-mask" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  2.5 0 -2.5 0 -0.235294" />
+            <feFlood flood-color="#F9B233" />
+            <feComposite in2="yellow-mask" operator="in" result="brand-yellow" />
+            <feComposite in="brand-yellow" in2="SourceGraphic" operator="over" />
+          </filter>
+        </defs>
+      </svg>
       <div class="container">
         <header class="section-heading">
           <h3 class="digital-category-title" id="herramientas-justificacion">Herramientas para la justificaci<span class="ofelia-char ofelia-weight-800 ofelia-acute ofelia-capital" style="--ofelia-width-adjust:0.118000em;--ofelia-center:0.437500em;--ofelia-advance:0.877000em;--ofelia-half-box:0.660000em;"><span class="ofelia-source">ó</span><span class="ofelia-paint" aria-hidden="true" data-base="O"></span></span>n</h3>

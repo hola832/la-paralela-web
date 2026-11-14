@@ -127,7 +127,11 @@
   height:30px;
   overflow:hidden;
 }
+.digital-justification-color-filter {
+  position:absolute;
+}
 .digital-justification-illustration {
+  filter:url(#amarillo-ilustraciones-justificacion);
   width:100%;
   max-width:40ch;
   margin:clamp(12px,2vw,20px) auto 0;
