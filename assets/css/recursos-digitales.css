@@ -157,7 +157,8 @@
   }
   .digital-apps .digital-example {
     position:relative;
-    grid-template-columns:clamp(140px,13vw,192px) minmax(0,1fr);
+    grid-template-columns:minmax(0,1fr) clamp(140px,13vw,192px);
+    grid-template-areas:"copy preview";
     gap:clamp(18px,2vw,28px);
     padding-block:24px 28px;
     border-top:0;
