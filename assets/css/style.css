@@ -748,7 +748,7 @@ button:focus-visible {
 }
 .footer-socials .text-link {
   font-size:12px;
-  gap:15px;
+  gap:6px;
 }
 .footer-socials .text-link>span {
   font-size:18px;
@@ -1207,6 +1207,7 @@ button:focus-visible {
   font-size:14px;
   gap:6px;
 }
+.footer-socials .text-link>svg,
 .social-links .text-link>svg {
   flex:none;
 }
