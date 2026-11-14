@@ -116,6 +116,17 @@
   border-top:1px solid var(--line);
   padding-top:16px;
 }
+.digital-justification-heading {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.digital-justification-heading > .collaboration-symbol {
+  flex:none;
+  width:30px;
+  height:30px;
+  overflow:hidden;
+}
 .digital-justification-illustration {
   width:100%;
   max-width:40ch;
