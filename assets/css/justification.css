@@ -51,6 +51,10 @@
   max-width: 68ch;
 }
 
+.justification-band--brief .justification-intro {
+  text-transform: uppercase;
+}
+
 .justification-band--brief ul {
   margin-block: 8px 0;
   padding-inline-start: 1.25em;
