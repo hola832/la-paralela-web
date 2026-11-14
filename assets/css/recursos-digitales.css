@@ -60,7 +60,7 @@
 }
 .digital-example-heading img {
   flex:none;
-  width:clamp(44px,5vw,64px);
+  width:clamp(56px,5vw,60px);
 }
 .digital-example-heading h4 {
   margin:0;
@@ -173,9 +173,6 @@
   .digital-apps .digital-example-heading {
     gap:12px;
     margin-bottom:12px;
-  }
-  .digital-apps .digital-example-heading img {
-    width:48px;
   }
   .digital-apps .digital-example-heading h4 {
     font-size:clamp(24px,2vw,28px);
