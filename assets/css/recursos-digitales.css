@@ -116,6 +116,11 @@
   border-top:1px solid var(--line);
   padding-top:16px;
 }
+.digital-justification-illustration {
+  width:100%;
+  max-width:40ch;
+  margin:clamp(12px,2vw,20px) auto 0;
+}
 .digital-justification h4 {
   margin:0;
   color:var(--black);
